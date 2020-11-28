@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +7,9 @@
     <title>Fortnite: Registro de Campeones</title>
 
     <link rel="stylesheet" href="styles/styles.css"> <!-- Stylesheet -->
-    <link rel="javascript" href="javascript/script.js"> <!-- Javascript -->
     <link rel="shortcut icon" type="image/png" href="images/favicon.png"> <!-- Web Icon -->
-
+    <script src="javascript/script.js"></script> <!-- JavaScript -->
+     
     <!-- Brackground image-->
     <style>
         body {
@@ -20,60 +19,66 @@
 </head>
 
 <body>
-    <div id="contenedor_logo">
-        <img src="images/Fortnite-logo.png" alt="Fornite" width="600" height="150">
-    </div>
+    <div class="container">
+        <div class="header">
+            <h2>¡Regístrate!</h2>
+        </div>
+        <form id="form" class="form">
+            <div class="form-control">
+                <label for="username">Nombre de usuario</label>
+                <input type="text" placeholder="Cómo te verán tus amigos en Fornite" id="username" />
 
-    <div id="contenedor_tabla">
-        <form class="formulario">
-            <!-- Table that contains all the data and their respective inputs-->
-            <table id="tabla1">
-                <th colspan="2" id="tabla_headers"> Registro Nueva Temporada </th>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
 
-                <tr>
-                    <td colspan="2" id="tabla_headers"> ¡Nuevo pase de Batalla Supremo! </td>
-                </tr>
+            <div class="form-control">
+                <label for="username">Nombre</label>
+                <input type="text" placeholder="Tu nombre" id="name" />
 
-                <tr>
-                    <td colspan="2" id="tabla_headers" style="font-size: 18px;"> ¡¡Regístrate ahora para ganarlo gratis!! </td>
-                </tr>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
 
-                <tr>
-                    <td id="tabla_nombres"> Usuario </td>
-                    <td> <input type="text"> </td>
-                </tr>
+            <div class="form-control">
+                <label for="username">Apellidos</label>
+                <input type="text" placeholder="Tus apellidos" id="surname" />
 
-                <tr>
-                    <td id="tabla_nombres"> Nombre </td>
-                    <td> <input type="text"> </td>
-                </tr>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
 
-                <tr>
-                    <td id="tabla_nombres"> Apellidos </td>
-                    <td> <input type="text"> </td>
-                </tr>
+            <div class="form-control">
+                <label for="username">E-mail</label>
+                <input type="email" placeholder="Tu correo de Epic Games" id="email" />
 
-                <tr>
-                    <td id="tabla_nombres"> Correo</td>
-                    <td> <input type="email"> </td>
-                </tr>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
 
-                <tr>
-                    <td id="tabla_nombres"> Teléfono </td>
-                    <td> <input type="tel"> </td>
-                </tr>
+            <div class="form-control">
+                <label for="username">Teléfono</label>
+                <input type="tel" placeholder="Tu teléfono" id="tlf"/>
 
-                <tr>
-                    <td id="tabla_nombres"> Cumpleaños </td>
-                    <td> <input type="date"> </td>
-                </tr>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
 
-                <tr>
-                    <td colspan="2" id="tabla_headers"> <input type="submit" value="¡Ser un Campeón!" id="boton_enviar"> </td>
-                </tr>
-            </table>
+            <div class="form-control">
+                <label for="username">Fecha de nacimiento</label>
+                <input type="date" id="date"/>
+
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <button>¡Ser un campeón!</button>
         </form>
     </div>
 </body>
-
 </html>
