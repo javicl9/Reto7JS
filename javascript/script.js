@@ -9,10 +9,11 @@ const date = document.getElementById('date');
 form.addEventListener('submit', e => {
     e.preventDefault();
 
-    checkInputs();
+    checkGivenData();
 });
 
-function checkInputs() {
+// Function that will check every single input
+function checkGivenData() {
     const usernameValue = username.value;
     const nameValue = name.value.trim();
     const surnameValue = surname.value.trim();
@@ -73,11 +74,11 @@ function checkInputs() {
     // If camposCorrectos equals 6 that'd mean all fields have been correctly validate
     if (camposCorrectos == 6) {     
         form.reset();
-
         alert("¡Enhorabuena! Te has registrado con éxito\n¡Estáte atento a tu email!\nGracias por jugar a Fortnite");
     } 
 }
 
+// These functions will set the proper css to help the viewer to know if the data he gave us is correct
 function setErrorFor(input, message) {
     const formControl = input.parentElement;
     const small = formControl.querySelector('small');
@@ -90,6 +91,7 @@ function setSuccessFor(input) {
     formControl.className = 'form-control success';
 }
 
+// Usefull functions to tell whether or not the data we picked is correct
 function isUsername(username) {
     return /^([0-9A-z]){1,16}$/.test(username);
 }
