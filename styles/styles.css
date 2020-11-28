@@ -1,7 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+#contenedor_logo {
+    margin: auto;
+    margin-top: 50px;
+    width: 31%;
+}
+
 #contenedor_tabla {
-    position: relative;
+    margin: auto;
+    padding: 30px;
+    background-color: rgb(127, 229, 255);
+    border-radius: 15px;
+    width: 45%;
+}
+
+#tabla1 {
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    border-collapse: separate;
+    border-spacing: 25px 20px;
+}
+
+#tabla_headers {
+    text-align: center;
 }
 
 #tabla_nombres {
     text-align: right;
+}
+
+input {
+    width: 100%;
+    padding: 10px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+#boton_enviar {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    background: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    transition: 0.8s;
+}
+
+#boton_enviar:hover {
+    color: rgb(127, 229, 255);
+    background-color: white;
 }

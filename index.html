@@ -10,48 +10,69 @@
     <link rel="stylesheet" href="styles/styles.css"> <!-- Stylesheet -->
     <link rel="javascript" href="javascript/script.js"> <!-- Javascript -->
     <link rel="shortcut icon" type="image/png" href="images/favicon.png"> <!-- Web Icon -->
+
+    <!-- Brackground image-->
+    <style>
+        body {
+            background-image: url('images/fondo.png');
+        }
+    </style>
 </head>
 
 <body>
+    <div id="contenedor_logo">
+        <img src="images/Fortnite-logo.png" alt="Fornite" width="600" height="150">
+    </div>
+
     <div id="contenedor_tabla">
-        <table>
-            <!-- Tabla que contiene el nombre y el campo para introducir los datos-->
-            <th colspan="2" align="center"> Registro Nueva Temporada </th>
+        <form class="formulario">
+            <!-- Table that contains all the data and their respective inputs-->
+            <table id="tabla1">
+                <th colspan="2" id="tabla_headers"> Registro Nueva Temporada </th>
 
-            <tr>
-                <td colspan="2" align="center"> Pase de Batalla Supremo </td>
-            </tr>
+                <tr>
+                    <td colspan="2" id="tabla_headers"> ¡Nuevo pase de Batalla Supremo! </td>
+                </tr>
 
-            <tr>
-                <td id="tabla_nombres"> Nombre </td>
-                <td> name </td>
-            </tr>
+                <tr>
+                    <td colspan="2" id="tabla_headers" style="font-size: 18px;"> ¡¡Regístrate ahora para ganarlo gratis!! </td>
+                </tr>
 
-            <tr>
-                <td id="tabla_nombres"> Apellidos </td>
-                <td> surname </td>
-            </tr>
+                <tr>
+                    <td id="tabla_nombres"> Usuario </td>
+                    <td> <input type="text"> </td>
+                </tr>
 
-            <tr>
-                <td id="tabla_nombres"> Correo</td>
-                <td> mail </td>
-            </tr>
+                <tr>
+                    <td id="tabla_nombres"> Nombre </td>
+                    <td> <input type="text"> </td>
+                </tr>
 
-            <tr>
-                <td id="tabla_nombres"> Teléfono </td>
-                <td> phone num</td>
-            </tr>
+                <tr>
+                    <td id="tabla_nombres"> Apellidos </td>
+                    <td> <input type="text"> </td>
+                </tr>
 
-            <tr>
-                <td id="tabla_nombres"> Numbre de Usuario </td>
-                <td> user name </td>
-            </tr>
+                <tr>
+                    <td id="tabla_nombres"> Correo</td>
+                    <td> <input type="email"> </td>
+                </tr>
 
-            <tr>
-                <td id="tabla_nombres"> Fecha de nacimiento </td>
-                <td> birth date </td>
-            </tr>
-        </table>
+                <tr>
+                    <td id="tabla_nombres"> Teléfono </td>
+                    <td> <input type="tel"> </td>
+                </tr>
+
+                <tr>
+                    <td id="tabla_nombres"> Cumpleaños </td>
+                    <td> <input type="date"> </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" id="tabla_headers"> <input type="submit" value="¡Ser un Campeón!" id="boton_enviar"> </td>
+                </tr>
+            </table>
+        </form>
     </div>
 </body>
 
