@@ -12,6 +12,7 @@ body {
 	justify-content: center;
 	min-height: 100vh;
 	margin: 0;
+	background-image: url('../images/fondo.png');
 }
 
 .container {
@@ -78,16 +79,6 @@ body {
 	right: 10px;
 }
 
-.form-control.success i.fa-check-circle {
-	color: #2ecc71;
-	visibility: visible;
-}
-
-.form-control.error i.fa-exclamation-circle {
-	color: #e74c3c;
-	visibility: visible;
-}
-
 .form-control small {
 	color: #e74c3c;
 	position: absolute;
@@ -100,7 +91,7 @@ body {
 	visibility: visible;
 }
 
-.form button {
+.form input[type="submit"] {
 	background-color: #00ccff;
 	border: 2px solid #00ccff;
 	border-radius: 4px;
@@ -114,7 +105,7 @@ body {
     transition: 0.8s;
 }
 
-.form button:hover {
+.form input[type="submit"]:hover {
 	background-color: #fff;
 	border: 2px solid #00ccff;
 	border-radius: 4px;
