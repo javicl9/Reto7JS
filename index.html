@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
 
     <link rel="stylesheet" href="styles/styles.css"> <!-- Stylesheet -->
     <link rel="shortcut icon" type="image/png" href="images/favicon.png"> <!-- Web Icon -->
-    <script src="javascript/script.js"></script> <!-- JavaScript -->
+    <script defer src="javascript/script.js"></script> <!-- JavaScript -->
 </head>
 
 <body>
@@ -18,49 +19,50 @@
         </div>
         <form id="form" class="form">
             <div class="form-control">
-                <label for="username">Nombre de usuario</label>
-                <input type="text" placeholder="Cómo te verán tus amigos en Fornite" id="username" />
+                <label>Nombre de usuario</label>
+                <input type="text" placeholder="Tu nombre de usuario para Fornite" id="username" />
 
                 <small>Error message</small>
             </div>
 
             <div class="form-control">
-                <label for="username">Nombre</label>
+                <label>Nombre</label>
                 <input type="text" placeholder="Tu nombre" id="name" />
 
                 <small>Error message</small>
             </div>
 
             <div class="form-control">
-                <label for="username">Apellidos</label>
+                <label>Apellidos</label>
                 <input type="text" placeholder="Tus apellidos" id="surname" />
 
                 <small>Error message</small>
             </div>
 
             <div class="form-control">
-                <label for="username">E-mail</label>
+                <label>E-mail</label>
                 <input type="email" placeholder="Tu correo de Epic Games" id="email" />
 
                 <small>Error message</small>
             </div>
 
             <div class="form-control">
-                <label for="username">Teléfono</label>
-                <input type="tel" placeholder="Tu teléfono" id="tlf"/>
+                <label>Teléfono</label>
+                <input type="tel" placeholder="Tu teléfono" id="tlf" />
 
                 <small>Error message</small>
             </div>
 
             <div class="form-control">
-                <label for="username">Fecha de nacimiento</label>
-                <input type="date" id="date"/>
-
+                <labe>Fecha de nacimiento</label>
+                <input type="date" id="date" />
+                
                 <small>Error message</small>
             </div>
 
-            <input type="submit" class="boton" value="¡Ser un campeón!">
+            <button type="submit">¡Ser un campeón!</button>
         </form>
     </div>
 </body>
+
 </html>

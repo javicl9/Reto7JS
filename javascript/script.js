@@ -13,50 +13,69 @@ form.addEventListener('submit', e => {
 });
 
 function checkInputs() {
-    const usernameValue = username.value.trim();
+    const usernameValue = username.value;
     const nameValue = name.value.trim();
     const surnameValue = surname.value.trim();
     const emailValue = email.value.trim();
     const tlfValue = tlf.value.trim();
     const dateValue = date.value.trim();
 
-    if (usernameValue === '') {
+    let camposCorrectos = 0;
+
+    if (usernameValue == '') {
         setErrorFor(username, 'Debes introducir un nombre de usuario');
+    } else if (!isUsername(usernameValue)) {
+        setErrorFor(username, 'Solo se permiten letras y números (max. 16 char.)')
     } else {
         setSuccessFor(username);
+        camposCorrectos++;
     }
 
-    if (nameValue === '') {
+    if (nameValue == '') {
         setErrorFor(name, 'Debes introducir tu nombre');
     } else {
         setSuccessFor(name);
+        camposCorrectos++;
     }
 
-    if (surnameValue === '') {
+    if (surnameValue == '') {
         setErrorFor(surname, 'Debes introducir tus apellidos');
     } else {
         setSuccessFor(surname);
+        camposCorrectos++;
     }
 
-    if (emailValue === '') {
+    if (emailValue == '') {
         setErrorFor(email, 'Debes introducir tu email');
     } else if (!isEmail(emailValue)) {
         setErrorFor(email, 'Este email no es válido');
     } else {
         setSuccessFor(email);
-    }
-    /*importante*/
-    if (tlfValue === '') {
-        setErrorFor(tlf, 'Password cannot be blank');
-    } else {
-        setSuccessFor(tlf);
+        camposCorrectos++;
     }
 
-    if (dateValue === '') {
+    if (tlfValue == '') {
+        setErrorFor(tlf, 'Debes introducir tu número de teléfono');
+    } else if (!isTlf(tlfValue)) {
+        setErrorFor(tlf, 'Este teléfono no es válido');
+    } else {
+        setSuccessFor(tlf);
+        camposCorrectos++;
+    }
+
+    if (dateValue == '') {
         setErrorFor(date, 'Debes introducir tu fecha de nacimiento');
     } else {
         setSuccessFor(date);
+        camposCorrectos++;
     }
+
+    // If camposCorrectos equals 6 that'd mean all fields have been correctly validate
+    if (camposCorrectos == 6) {     
+        form.reset();
+
+        alert("¡Enhorabuena! Te has registrado con éxito\n¡Estáte atento a tu email!\nGracias por jugar a Fortnite");
+    } 
 }
 
 function setErrorFor(input, message) {
@@ -71,6 +90,14 @@ function setSuccessFor(input) {
     formControl.className = 'form-control success';
 }
 
+function isUsername(username) {
+    return /^([0-9A-z]){1,16}$/.test(username);
+}
+
 function isEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
+
+function isTlf(tlf) {
+    return /^[1-9]{9}$/.test(tlf);
 }

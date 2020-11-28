@@ -72,13 +72,6 @@ body {
 	border-color: #e74c3c;
 }
 
-.form-control i {
-	visibility: hidden;
-	position: absolute;
-	top: 40px;
-	right: 10px;
-}
-
 .form-control small {
 	color: #e74c3c;
 	position: absolute;
@@ -91,7 +84,7 @@ body {
 	visibility: visible;
 }
 
-.form input[type="submit"] {
+.form button {
 	background-color: #00ccff;
 	border: 2px solid #00ccff;
 	border-radius: 4px;
@@ -105,7 +98,7 @@ body {
     transition: 0.8s;
 }
 
-.form input[type="submit"]:hover {
+.form button:hover {
 	background-color: #fff;
 	border: 2px solid #00ccff;
 	border-radius: 4px;
