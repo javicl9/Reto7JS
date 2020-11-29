@@ -72,13 +72,14 @@ function checkGivenData() {
     }
 
     // If camposCorrectos equals 6 that'd mean all fields have been correctly validate
-    if (camposCorrectos == 6) {     
-        form.reset();
+    if (camposCorrectos == 6) {
         alert("¡Enhorabuena! Te has registrado con éxito\n¡Estáte atento a tu email!\nGracias por jugar a Fortnite");
+
+        location.replace("https://www.epicgames.com/fortnite/es-ES/home");
     } 
 }
 
-// These functions will set the proper css to help the viewer to know if the data he gave us is correct
+// These functions will set the proper css to help the viewer to know whether the data he gave us is correct
 function setErrorFor(input, message) {
     const formControl = input.parentElement;
     const small = formControl.querySelector('small');
