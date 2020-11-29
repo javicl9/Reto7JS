@@ -6,6 +6,7 @@ const email = document.getElementById('email');
 const tlf = document.getElementById('tlf');
 const date = document.getElementById('date');
 
+// Event listener for the form's submit action
 form.addEventListener('submit', e => {
     e.preventDefault();
 
@@ -102,5 +103,5 @@ function isEmail(email) {
 }
 
 function isTlf(tlf) {
-    return /^[1-9]{9}$/.test(tlf);
+    return /^[0-9]{9}$/.test(tlf);
 }
